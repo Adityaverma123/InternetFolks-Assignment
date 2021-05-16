@@ -2,31 +2,35 @@ import styled from "styled-components";
 const Home = () => {
   return (
     <HomeBody>
-      <FirstContainer>
-        <FirstContainerBody>
-          <h1>More than just shorter links</h1>
-          <p>
-            Build your brand's recognition and get detailed insights on how your
-            links are performing
-          </p>
-          <button> Get Started</button>
-        </FirstContainerBody>
+      <BodyOuter>
+        <FirstContainer>
+          <FirstContainerBody>
+            <h1>More than just shorter links</h1>
+            <p>
+              Build your brand's recognition and get detailed insights on how
+              your links are performing
+            </p>
+            <button> Get Started</button>
+          </FirstContainerBody>
 
-        <img
-          src={require("../assets/illustration-working.svg").default}
-          alt="illustration"
-        />
-      </FirstContainer>
+          <img
+            src={require("../assets/illustration-working.svg").default}
+            alt="illustration"
+          />
+        </FirstContainer>
+      </BodyOuter>
     </HomeBody>
   );
 };
 
 export default Home;
-const HomeBody = styled.div`
+const HomeBody = styled.div``;
+const BodyOuter = styled.div`
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
 `;
+
 const FirstContainer = styled.div`
   display: flex;
   justify-content: space-between;

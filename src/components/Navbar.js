@@ -7,7 +7,9 @@ const Navbar = () => {
   return (
     <Nav>
       <NavLeft>
-        <img src={require("../assets/logo.svg").default} alt="mySvgImage" />
+        <Link to="/">
+          <img src={require("../assets/logo.svg").default} alt="mySvgImage" />
+        </Link>
         <Hamburger onClick={() => openNav(!nav)}>
           <span />
           <span />
@@ -49,7 +51,7 @@ const NavLeft = styled.div`
   @media (max-width: 768px) {
     justify-content: space-between;
   }
-  > img {
+  > a > img {
     margin-top: 5px;
   }
 `;
@@ -78,6 +80,7 @@ const NavRight = styled.div`
       height: 1px;
       opacity: 0.5;
       background-color: #9d9ba7;
+      margin: 10px 0;
     }
   }
 `;
@@ -101,9 +104,11 @@ const Hamburger = styled.div`
 const Links = styled.div`
   margin-left: 20px;
   display: flex;
+  align-items: center;
   @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;
+    margin-left: 0;
   }
   > a {
     margin: 0 10px;
@@ -111,7 +116,7 @@ const Links = styled.div`
     cursor: pointer;
     color: #a4a3aa;
     text-align: center;
-    padding: 15px;
+
     font-weight: 500;
     :hover {
       color: #34313d;
@@ -119,6 +124,8 @@ const Links = styled.div`
     @media (max-width: 768px) {
       margin: 0 20px;
       color: white;
+      width: 90%;
+      padding: 15px;
       :hover {
         color: white;
       }
@@ -126,13 +133,13 @@ const Links = styled.div`
   }
 `;
 const Login = styled.button`
-  margin-right: 30px;
+  /* margin-right: 30px; */
   background: none;
   border: none;
   cursor: pointer;
   color: #a4a3aa;
   font-weight: 750;
-  padding: 15px 15px 15px 25px;
+  padding: 15px;
 
   @media (max-width: 768px) {
     margin: 0;
@@ -160,6 +167,7 @@ const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   margin-right: 50px;
+  justify-content: space-between;
   @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;
