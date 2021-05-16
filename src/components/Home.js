@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ShortenLink from "./ShortenLink";
 const Home = () => {
   return (
     <HomeBody>
@@ -19,6 +20,7 @@ const Home = () => {
           />
         </FirstContainer>
       </BodyOuter>
+      <ShortenLink />
     </HomeBody>
   );
 };
