@@ -48,7 +48,9 @@ const NavLeft = styled.div`
   width: 100%;
   @media (max-width: 768px) {
     justify-content: space-between;
-    align-items: center;
+  }
+  >img{
+    margin-top:5px;
   }
 `;
 const NavRight = styled.div`
@@ -129,12 +131,11 @@ const Login = styled.button`
   border: none;
   cursor: pointer;
   color: #a4a3aa;
-  padding: 15px;
   font-weight: 750;
   @media (max-width: 768px) {
     margin: 0;
     color: white;
-    padding-left: 25px;
+    padding: 15px 15px 15px 25px;
   }
 `;
 const Signup = styled.button`
@@ -144,6 +145,7 @@ const Signup = styled.button`
   color: white;
   padding: 7px 18px;
   border-radius: 15px;
+
   font-weight: 550;
   :hover {
     opacity: 0.8;
@@ -154,8 +156,10 @@ const Signup = styled.button`
   }
 `;
 const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
   @media (max-width: 768px) {
-    display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
