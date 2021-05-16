@@ -36,6 +36,14 @@ const FirstContainer = styled.div`
     width: 60%;
     height: 350px;
     margin-right: -50px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 `;
 const FirstContainerBody = styled.div`
@@ -45,16 +53,27 @@ const FirstContainerBody = styled.div`
   margin: 45px 0;
   /* flex: 0.6; */
   padding: 10px 20px 10px 0;
+  @media (max-width: 768px) {
+    padding-right: 0;
+    align-items: center;
+  }
   > h1 {
     color: #34303d;
     font-size: 50px;
     line-height: 50px;
+    @media (max-width: 768px) {
+      text-align: center;
+    }
   }
   > p {
     color: #9c9ba2;
     margin: 10px 5px 25px 0;
     width: 80%;
     font-weight: 550;
+    @media (max-width: 768px) {
+      text-align: center;
+      width: 100%;
+    }
   }
   > button {
     background: none;

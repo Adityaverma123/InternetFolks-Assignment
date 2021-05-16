@@ -49,8 +49,8 @@ const NavLeft = styled.div`
   @media (max-width: 768px) {
     justify-content: space-between;
   }
-  >img{
-    margin-top:5px;
+  > img {
+    margin-top: 5px;
   }
 `;
 const NavRight = styled.div`
@@ -132,10 +132,11 @@ const Login = styled.button`
   cursor: pointer;
   color: #a4a3aa;
   font-weight: 750;
+  padding: 15px 15px 15px 25px;
+
   @media (max-width: 768px) {
     margin: 0;
     color: white;
-    padding: 15px 15px 15px 25px;
   }
 `;
 const Signup = styled.button`
@@ -163,5 +164,6 @@ const ButtonContainer = styled.div`
     flex-direction: column;
     width: 100%;
     align-items: center;
+    margin: 0;
   }
 `;
