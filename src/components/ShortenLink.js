@@ -88,7 +88,7 @@ const InputContainer = styled.div`
   }
   > input {
     width: 100%;
-    padding: 10px 25px;
+    padding: 20px 25px;
     border: none;
     border-radius: 8px;
     border: ${({ isempty }) => (isempty ? "2px solid #d9627d;" : "none")};
@@ -129,7 +129,7 @@ const Form = styled.form`
     color: white;
     font-weight: 550;
     cursor: pointer;
-    padding: 10px 30px;
+    padding: 20px 30px;
     :hover {
       opacity: 0.9;
     }
@@ -143,7 +143,7 @@ const Form = styled.form`
 const FormContainer = styled.div`
   background-size: cover;
   background-image: url(${require("../assets/bg-shorten-desktop.svg").default});
-  padding: 30px;
+  padding: 40px;
   width: 80%;
   background-color: #3a3053;
   font-weight: 550;
