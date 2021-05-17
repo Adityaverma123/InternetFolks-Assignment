@@ -1,3 +1,4 @@
+import "./index.css";
 import "./App.css";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
@@ -13,7 +14,7 @@ function App() {
       <Router>
         <Navbar />
         <AppBody>
-        <Switch>
+          <Switch>
             <Route exact path="/">
               <Home />
             </Route>

@@ -18,9 +18,30 @@ const Navbar = () => {
       </NavLeft>
       <NavRight nav={nav}>
         <Links>
-          <Link to="/features">Features</Link>
-          <Link to="/pricing">Pricing</Link>
-          <Link to="/resources">Resources</Link>
+          <Link
+            to="/features"
+            onClick={() => {
+              openNav(!nav);
+            }}
+          >
+            Features
+          </Link>
+          <Link
+            to="/pricing"
+            onClick={() => {
+              openNav(!nav);
+            }}
+          >
+            Pricing
+          </Link>
+          <Link
+            to="/resources"
+            onClick={() => {
+              openNav(!nav);
+            }}
+          >
+            Resources
+          </Link>
         </Links>
         <hr></hr>
         <ButtonContainer>

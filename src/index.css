@@ -1,6 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  /* font-family: Poppins; */
 }
 body {
   margin: 0;
@@ -14,4 +15,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("https://fonts.google.com/specimen/Poppins");
 }

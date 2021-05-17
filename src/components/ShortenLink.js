@@ -1,19 +1,39 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import Links from "./Links";
 
 const ShortenLink = () => {
   const [isempty, setEmpty] = useState(false);
   const [value, setValue] = useState("");
+  const [links, setLinks] = useState([]);
+  const [loading, setLoading] = useState(false);
   const fetchLinks = (e) => {
     e.preventDefault();
     if (value === "") {
       setEmpty(true);
-      console.log(isempty);
     } else {
+      setLoading(true);
       setEmpty(false);
-      console.log(isempty);
+      axios
+        .get("https://api.shrtco.de/v2/shorten?url=" + value)
+        .then((response) => {
+          setLoading(false);
+          const item = response.data.result.full_short_link;
+          const originalLink = response.data.result.original_link;
+          const newList = links.concat({
+            shortLink: item,
+            originalLink: originalLink,
+          });
+          setLinks(newList);
+          console.log();
+        })
+        .catch((err) => {
+          setLoading(false);
+        });
     }
   };
+
   return (
     <OuterContainer>
       <FormContainer isempty={isempty}>
@@ -29,11 +49,20 @@ const ShortenLink = () => {
             ></input>
             <p>Please add a link</p>
           </InputContainer>
-          <button type="submit" onClick={fetchLinks}>
-            Shorten it!
-          </button>
+          {loading ? (
+            <button disabled={true}>Shortening..</button>
+          ) : (
+            <button type="submit" onClick={fetchLinks} disabled={loading}>
+              Shorten it!
+            </button>
+          )}
         </Form>
       </FormContainer>
+      <LinksList>
+        {links.map((item, id) => (
+          <Links key={id} link={item.originalLink} shortLink={item.shortLink} />
+        ))}
+      </LinksList>
     </OuterContainer>
   );
 };
@@ -43,7 +72,12 @@ const OuterContainer = styled.div`
   background: #f0f1f6;
   margin-top: 80px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+`;
+const LinksList = styled.div`
+  margin-top: 20px;
+  width: 80%;
 `;
 const InputContainer = styled.div`
   display: flex;
@@ -120,5 +154,6 @@ const FormContainer = styled.div`
   @media (max-width: 768px) {
     background: url(${require("../assets/bg-shorten-desktop.svg").default});
     background-color: #3a3053;
+    margin-top: -70px;
   }
 `;
