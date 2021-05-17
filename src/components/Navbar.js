@@ -104,9 +104,7 @@ const NavRight = styled.div`
     @media (max-width: 768px) {
       display: block;
       width: 80%;
-      border: none;
-      height: 1px;
-      opacity: 0.5;
+      opacity: 0.2;
       background-color: #9d9ba7;
       margin: 10px 0;
     }

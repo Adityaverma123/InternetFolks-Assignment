@@ -1,4 +1,3 @@
-import { buildQueries } from "@testing-library/dom";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -7,15 +6,16 @@ const Links = ({ link, shortLink }) => {
   const copyToClipboard = () => {
     if (text === "Copied!") {
       setText("Copy!");
+    } else {
+      setText("Copied!");
     }
-    setText("Copied!");
     navigator.clipboard.writeText(shortLink);
   };
   return (
     <LinksContainer>
       <a href={link}>{link}</a>
       <hr></hr>
-      <RelinkContainer>
+      <RelinkContainer text={text}>
         <a href={shortLink}>{shortLink}</a>
 
         <button onClick={copyToClipboard}>{text}</button>
@@ -31,7 +31,7 @@ const LinksContainer = styled.div`
   justify-content: space-between;
   padding: 15px;
   align-items: center;
-  margin: 10px 0;
+  margin: 20px 0;
   border-radius: 7px;
   > hr {
     display: none;
@@ -47,8 +47,8 @@ const LinksContainer = styled.div`
   }
   @media (max-width: 768px) {
     flex-direction: column;
-    align-items: center;
-    margin: 0;
+    /* align-items: center; */
+    margin: 20px 0;
   }
   > a {
     text-decoration: none;
@@ -84,7 +84,8 @@ const RelinkContainer = styled.div`
   }
   > button {
     border: none;
-    background-color: #2bd1d1;
+    background-color: ${({ text }) =>
+      text === "Copy!" ? "#2bd1d1" : "#3b3054"};
     color: white;
     padding: 7px 35px;
     font-weight: 550;

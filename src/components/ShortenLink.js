@@ -25,6 +25,7 @@ const ShortenLink = () => {
             shortLink: item,
             originalLink: originalLink,
           });
+          setValue("");
           setLinks(newList);
           console.log();
         })
@@ -76,6 +77,9 @@ const OuterContainer = styled.div`
 const LinksList = styled.div`
   margin-top: 20px;
   width: 80%;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 const InputContainer = styled.div`
   display: flex;
