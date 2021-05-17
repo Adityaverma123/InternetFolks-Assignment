@@ -31,6 +31,9 @@ const BlockContainer = styled.div`
     font-size: 30px;
     color: #35323e;
     margin: 30px 0 20px;
+    @media (max-width: 425px) {
+      font-size: 25px;
+    }
   }
   > p {
     color: #bfbfbf;

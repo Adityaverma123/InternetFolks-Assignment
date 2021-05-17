@@ -70,6 +70,7 @@ export default Home;
 
 const HomeBody = styled.div`
   width: 100%;
+  margin-top: 100px;
 `;
 const BodyOuter = styled.div`
   width: 90%;
@@ -125,13 +126,16 @@ const AdvancedStats = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top: 80px;
+  @media (max-width: 768px) {
+    margin-top: 50px;
+  }
   > h1 {
     color: #232127;
     font-weight: 700;
     font-size: 40px;
     text-align: center;
     @media (max-width: 538px) {
-      font-size: 35px;
+      font-size: 25px;
     }
   }
   > p {
@@ -185,7 +189,7 @@ const BoostContainer = styled.div`
     padding: 15px 50px;
     font-size: 20px;
     font-weight: 700;
-    margin-top: 10px;
+    margin-top: 20px;
     border-radius: 25px;
     color: white;
   }
@@ -202,7 +206,7 @@ const FirstContainer = styled.div`
   > img {
     /* flex: 0.4; */
     width: 60%;
-    height: 500px;
+    height: 50%px;
     margin-right: -50px;
     @media (max-width: 768px) {
       width: 100%;
@@ -227,10 +231,17 @@ const FirstContainerBody = styled.div`
   }
   > h1 {
     color: #34303d;
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 70px;
+    line-height: 75px;
     @media (max-width: 768px) {
       text-align: center;
+      font-size: 60px;
+      line-height: 60px;
+    }
+    @media (max-width: 425px) {
+      text-align: center;
+      font-size: 40px;
+      line-height: 40px;
     }
   }
   > p {

@@ -153,5 +153,7 @@ const FormContainer = styled.div`
     background: url(${require("../assets/bg-shorten-desktop.svg").default});
     background-color: #3a3053;
     margin-top: -70px;
+    padding: 20px;
+    width: 90%;
   }
 `;

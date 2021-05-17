@@ -5,56 +5,63 @@ import styled from "styled-components";
 const Navbar = () => {
   const [nav, openNav] = useState(false);
   return (
-    <Nav>
-      <NavLeft>
-        <Link to="/">
-          <img src={require("../assets/logo.svg").default} alt="Logo" />
-        </Link>
-        <Hamburger onClick={() => openNav(!nav)}>
-          <span />
-          <span />
-          <span />
-        </Hamburger>
-      </NavLeft>
-      <NavRight nav={nav}>
-        <Links>
-          <Link
-            to="/features"
-            onClick={() => {
-              openNav(!nav);
-            }}
-          >
-            Features
+    <NavBody>
+      <Nav>
+        <NavLeft>
+          <Link to="/">
+            <img src={require("../assets/logo.svg").default} alt="Logo" />
           </Link>
-          <Link
-            to="/pricing"
-            onClick={() => {
-              openNav(!nav);
-            }}
-          >
-            Pricing
-          </Link>
-          <Link
-            to="/resources"
-            onClick={() => {
-              openNav(!nav);
-            }}
-          >
-            Resources
-          </Link>
-        </Links>
-        <hr></hr>
-        <ButtonContainer>
-          <Login>Login</Login>
-          <Signup>Sign Up</Signup>
-        </ButtonContainer>
-      </NavRight>
-    </Nav>
+          <Hamburger onClick={() => openNav(!nav)}>
+            <span />
+            <span />
+            <span />
+          </Hamburger>
+        </NavLeft>
+        <NavRight nav={nav}>
+          <Links>
+            <Link
+              to="/features"
+              onClick={() => {
+                openNav(!nav);
+              }}
+            >
+              Features
+            </Link>
+            <Link
+              to="/pricing"
+              onClick={() => {
+                openNav(!nav);
+              }}
+            >
+              Pricing
+            </Link>
+            <Link
+              to="/resources"
+              onClick={() => {
+                openNav(!nav);
+              }}
+            >
+              Resources
+            </Link>
+          </Links>
+          <hr></hr>
+          <ButtonContainer>
+            <Login>Login</Login>
+            <Signup>Sign Up</Signup>
+          </ButtonContainer>
+        </NavRight>
+      </Nav>
+    </NavBody>
   );
 };
 
 export default Navbar;
+const NavBody = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 const Nav = styled.nav`
+  position: absolute;
   display: flex;
   justify-content: space-between;
   width: 90%;
