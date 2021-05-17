@@ -7,6 +7,7 @@ import Features from "./components/Features";
 import Resources from "./components/Resources";
 import Pricing from "./components/Pricing";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home />
+              <Footer/>
             </Route>
           </Switch>
           <Switch>

@@ -8,7 +8,7 @@ const Navbar = () => {
     <Nav>
       <NavLeft>
         <Link to="/">
-          <img src={require("../assets/logo.svg").default} alt="mySvgImage" />
+          <img src={require("../assets/logo.svg").default} alt="Logo" />
         </Link>
         <Hamburger onClick={() => openNav(!nav)}>
           <span />
