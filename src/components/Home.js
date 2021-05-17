@@ -20,7 +20,9 @@ const Home = () => {
           />
         </FirstContainer>
       </BodyOuter>
-      <ShortenLink />
+      <StatsContainer>
+        <ShortenLink />
+      </StatsContainer>
     </HomeBody>
   );
 };
@@ -33,6 +35,10 @@ const BodyOuter = styled.div`
   width: 90%;
   margin: 0 auto;
   overflow: hidden;
+`;
+const StatsContainer = styled.div`
+  background: #f0f1f6;
+  margin-top: 80px;
 `;
 
 const FirstContainer = styled.div`

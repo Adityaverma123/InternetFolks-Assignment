@@ -69,8 +69,6 @@ const ShortenLink = () => {
 
 export default ShortenLink;
 const OuterContainer = styled.div`
-  background: #f0f1f6;
-  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
