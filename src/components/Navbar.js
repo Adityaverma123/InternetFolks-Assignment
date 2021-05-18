@@ -89,13 +89,13 @@ const NavRight = styled.div`
   justify-content: space-between;
   @media (max-width: 768px) {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     align-items: center;
     background: #3a3053;
     margin: 10px;
     padding: ${({ nav }) => (nav ? "10px" : "0")};
     overflow: hidden;
-    max-height: ${({ nav }) => (nav ? "300px" : "0")};
+    max-height: ${({ nav }) => (nav ? "400px" : "0")};
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
   }
@@ -143,7 +143,7 @@ const Links = styled.div`
     color: #a4a3aa;
     text-align: center;
 
-    font-weight: 500;
+    font-weight: 700;
     :hover {
       color: #34313d;
     }
@@ -177,8 +177,8 @@ const Signup = styled.button`
   cursor: pointer;
   background: #2ad0d2;
   color: white;
-  padding: 7px 18px;
-  border-radius: 15px;
+  padding: 7px 20px;
+  border-radius: 20px;
 
   font-weight: 550;
   :hover {

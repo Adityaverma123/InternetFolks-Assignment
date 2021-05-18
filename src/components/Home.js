@@ -190,8 +190,12 @@ const BoostContainer = styled.div`
     font-size: 20px;
     font-weight: 700;
     margin-top: 20px;
+    cursor: pointer;
     border-radius: 25px;
     color: white;
+    :hover {
+      opacity: 0.8;
+    }
   }
 `;
 const StatsContainer = styled.div`

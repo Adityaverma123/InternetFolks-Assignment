@@ -131,7 +131,7 @@ const Form = styled.form`
     border-radius: 10px;
     flex: 0.2;
     color: white;
-    font-weight: 550;
+    font-weight: 700;
     cursor: pointer;
     padding: 20px 30px;
     :hover {

@@ -26,6 +26,9 @@ const BlockContainer = styled.div`
     align-items: center;
     max-width: 500px;
   }
+  @media (max-width: 388px) {
+    height: 300px;
+  }
 
   > h1 {
     font-size: 30px;
@@ -33,6 +36,9 @@ const BlockContainer = styled.div`
     margin: 30px 0 20px;
     @media (max-width: 425px) {
       font-size: 25px;
+    }
+    @media (max-width: 380px) {
+      font-size: 20px;
     }
   }
   > p {

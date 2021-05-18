@@ -69,7 +69,7 @@ const ResourcesContainer = styled.div`
   display: flex;
   flex-direction: column;
   > h3 {
-    color: #bfbfbf;
+    color: white;
     font-weight: 700;
     margin-bottom: 10px;
     @media (max-width: 850px) {
@@ -93,7 +93,7 @@ const CompanyContainer = styled.div`
   display: flex;
   flex-direction: column;
   > h3 {
-    color: #bfbfbf;
+    color: white;
     font-weight: 700;
     margin-bottom: 10px;
     @media (max-width: 850px) {
@@ -127,7 +127,7 @@ const FeatureContainer = styled.div`
   display: flex;
   flex-direction: column;
   > h3 {
-    color: #bfbfbf;
+    color: white;
     font-weight: 700;
     margin-bottom: 10px;
     @media (max-width: 850px) {
