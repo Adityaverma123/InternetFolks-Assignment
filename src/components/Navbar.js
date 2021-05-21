@@ -20,7 +20,7 @@ const Navbar = () => {
         <NavRight nav={nav}>
           <Links>
             <Link
-              to="/features"
+              to="/"
               onClick={() => {
                 openNav(!nav);
               }}
@@ -28,7 +28,7 @@ const Navbar = () => {
               Features
             </Link>
             <Link
-              to="/pricing"
+              to="/"
               onClick={() => {
                 openNav(!nav);
               }}
@@ -36,7 +36,7 @@ const Navbar = () => {
               Pricing
             </Link>
             <Link
-              to="/resources"
+              to="/"
               onClick={() => {
                 openNav(!nav);
               }}
