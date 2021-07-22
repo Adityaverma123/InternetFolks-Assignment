@@ -17,8 +17,7 @@ const BlockContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: white;
-  max-width: 400px;
-  height: 250px;
+  height: 270px;
   padding: 10px;
   border-radius: 7px;
 
@@ -31,7 +30,7 @@ const BlockContainer = styled.div`
   }
 
   > h1 {
-    font-size: 30px;
+    font-size: 25px;
     color: #35323e;
     margin: 30px 0 20px;
     @media (max-width: 425px) {
@@ -51,15 +50,17 @@ const BlockContainer = styled.div`
   }
 `;
 const ImageContainer = styled.div`
-  height: 90px;
-  width: 90px;
+  height: 50px;
+  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -60px;
-  border-radius: 999px;
+  margin-top: -40px;
+  border-radius: 50%;
   background-color: #3b3054;
   > img {
     object-fit: contain;
+    height: 50%;
+    widht: 50%;
   }
 `;

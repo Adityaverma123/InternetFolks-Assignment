@@ -103,16 +103,18 @@ const Target = styled.div`
 const StatBlocksContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+
+  width: 85%;
+  margin: 80px auto;
   align-items: center;
 
   > hr {
-    width: 20px;
+    width: 70px;
     border: none;
     height: 8px;
     background-color: #2acfcf;
     @media (max-width: 900px) {
-      /* width: 30px; */
+      width: 10px;
       height: 80px;
     }
   }
@@ -173,11 +175,11 @@ const BoostContainer = styled.div`
     background-size: cover;
   }
   > h1 {
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     font-weight: 700;
     @media (max-width: 768px) {
-      font-size: 30px;
+      font-size: 20px;
     }
     @media (max-width: 425px) {
       font-size: 25px;
@@ -187,7 +189,7 @@ const BoostContainer = styled.div`
     border: none;
     background-color: #2acfcf;
     padding: 15px 50px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     margin-top: 20px;
     cursor: pointer;
@@ -209,8 +211,8 @@ const FirstContainer = styled.div`
   margin-top: 20px;
   > img {
     /* flex: 0.4; */
-    width: 60%;
-    height: 50%px;
+    width: 50%;
+    height:90%
     margin-right: -50px;
     @media (max-width: 768px) {
       width: 100%;
@@ -235,17 +237,17 @@ const FirstContainerBody = styled.div`
   }
   > h1 {
     color: #34303d;
-    font-size: 70px;
+    font-size: 60px;
     line-height: 75px;
     @media (max-width: 768px) {
       text-align: center;
-      font-size: 60px;
-      line-height: 60px;
+      font-size: 30px;
+      line-height: 30px;
     }
     @media (max-width: 425px) {
       text-align: center;
-      font-size: 40px;
-      line-height: 40px;
+      font-size: 20px;
+      line-height: 25px;
     }
   }
   > p {
@@ -266,7 +268,7 @@ const FirstContainerBody = styled.div`
     padding: 10px 30px;
     border-radius: 20px;
     font-weight: 550;
-    font-size: 18px;
+    font-size: 14px;
     cursor: pointer;
     :hover {
       opacity: 0.8;
